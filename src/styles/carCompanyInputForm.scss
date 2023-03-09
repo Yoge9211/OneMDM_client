@@ -1,0 +1,39 @@
+.formContainer {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  .backBtn {
+    height: 5vh;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    > button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #121e52;
+      color: aliceblue;
+      cursor: pointer;
+    }
+  }
+  .inputForm {
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    > label {
+      color: rgb(35, 35, 141);
+      margin: 0px 0px -5px 0px;
+    }
+    input {
+      width: 50%;
+      height: 5vh;
+      padding: 0 1rem;
+      margin: 0.5rem 20px;
+    }
+  }
+}

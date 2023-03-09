@@ -1,0 +1,27 @@
+.viewCarCompaniesContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .btnContainer {
+    width: 800px;
+    height: 10vh;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    .btn {
+      padding: 5px 20px;
+      background-color: rgb(77, 63, 205);
+      border: none;
+      text-decoration: none;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+}
