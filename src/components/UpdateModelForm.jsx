@@ -15,7 +15,7 @@ const CreateCarModelForm = () => {
   const getData = async () => {
     const response = await axios({
       method: 'GET',
-      url: `http://localhost:4000/get-one-model/${id}`,
+      url: `https://one-mdm-server.vercel.app/get-one-model/${id}`,
     })
     setData(response.data.data)
   }
@@ -25,7 +25,7 @@ const CreateCarModelForm = () => {
     try {
       const response = await axios({
         method: 'patch',
-        url: `http://localhost:4000/update-model/${id}`,
+        url: `https://one-mdm-server.vercel.app/update-model/${id}`,
         data: data,
       })
       if (response.status === 201) {

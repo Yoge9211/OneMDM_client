@@ -19,7 +19,7 @@ const CreateCarModelForm = () => {
     try {
       const response = await axios({
         method: 'post',
-        url: 'http://localhost:4000/create-model',
+        url: 'https://one-mdm-server.vercel.app/create-model',
         data: data,
       })
       if (response) {

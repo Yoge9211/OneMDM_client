@@ -1,0 +1,107 @@
+.formContainer {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  .backBtn {
+    height: 5vh;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    > button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #121e52;
+      color: aliceblue;
+      cursor: pointer;
+    }
+  }
+
+  .inputForm {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .submitBtnAndInputContainer {
+      width: 100%;
+      height: 60vh;
+      display: flex;
+
+      .companyInput {
+        width: 35%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > label {
+          color: rgb(35, 35, 141);
+          margin: 0px 0px -5px 0px;
+        }
+        input {
+          width: 50%;
+          height: 5vh;
+          padding: 0 1rem;
+          margin: 0.5rem 20px;
+        }
+      }
+      .modelInput {
+        width: 50%;
+        height: 45vh;
+
+        overflow-y: scroll;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        .modelForm {
+          width: 100%;
+          height: 45vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          > label {
+            color: rgb(35, 35, 141);
+            margin: 0px 0px -5px 0px;
+          }
+          input {
+            width: 50%;
+            min-height: 5vh;
+            padding: 0 1rem;
+            margin: 0.5rem 20px;
+          }
+          .addMoreModel {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0px;
+          }
+          .removeModel {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0px;
+          }
+        }
+      }
+    }
+    .submitBtn {
+      width: 50%;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > input {
+        width: 25%;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}

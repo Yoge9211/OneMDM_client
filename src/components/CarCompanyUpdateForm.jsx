@@ -19,7 +19,7 @@ const CarCompanyInputForm = () => {
   const getCompanyData = async () => {
     const response = await axios({
       method: 'GET',
-      url: `http://localhost:4000/get-company/${id}`,
+      url: `https://one-mdm-server.vercel.app/get-company/${id}`,
     })
     if (response.status === 200) {
       console.log(response.data.data)
@@ -32,7 +32,7 @@ const CarCompanyInputForm = () => {
     try {
       const response = await axios({
         method: 'patch',
-        url: `http://localhost:4000/update-company/${id}`,
+        url: `https://one-mdm-server.vercel.app/update-company/${id}`,
         data: data,
       })
       if (response.status === 201) {

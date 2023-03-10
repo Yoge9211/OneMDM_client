@@ -20,7 +20,7 @@ const ViewCompanModels = (props) => {
 
   const getModels = async () => {
     const response = await axios(
-      `http://localhost:4000/view/companyModels/${id}`,
+      `https://one-mdm-server.vercel.app/view/companyModels/${id}`,
     )
     setModels(response.data.data)
   }
@@ -32,7 +32,7 @@ const ViewCompanModels = (props) => {
   const handleDelete = async (id) => {
     // console.log(id)
     const response = await axios.delete(
-      `http://localhost:4000/delete-model/${id}`,
+      `https://one-mdm-server.vercel.app/delete-model/${id}`,
     )
     if (response.status === 200) {
       alert('Car Model deleted successfully')

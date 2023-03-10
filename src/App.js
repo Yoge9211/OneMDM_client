@@ -9,6 +9,8 @@ import ViewModel from './components/ViewModel'
 import CreateCarModelForm from './components/CreateCarModelForm'
 import UpdateModelForm from './components/UpdateModelForm'
 import CarCompanyUpdateForm from './components/CarCompanyUpdateForm'
+import CarCompanyInputWithManyModels from './components/CarCompanyInputWithManyModels'
+import CompanyInputWithModels from './components/CompanyInputWithModels'
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
         <Route path="/models" element={<CarModels />} />
         <Route path="/ceos" element={<CompanyCeo />} />
         <Route path="/create/company" element={<CarCompanyInputForm />} />
+        <Route
+          path="/create/company-with-models/"
+          element={<CarCompanyInputWithManyModels />}
+        />
         <Route path="/view/companyModels/:id" element={<ViewModel />} />
         <Route path="/create-model/:id" element={<CreateCarModelForm />} />
         <Route path="/update-model/:id" element={<UpdateModelForm />} />

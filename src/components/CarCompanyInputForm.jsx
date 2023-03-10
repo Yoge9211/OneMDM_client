@@ -18,7 +18,7 @@ const CarCompanyInputForm = () => {
     try {
       const response = await axios({
         method: 'post',
-        url: 'http://localhost:4000/create-company',
+        url: 'https://one-mdm-server.vercel.app/create-company',
         data: data,
       })
       if (response) {

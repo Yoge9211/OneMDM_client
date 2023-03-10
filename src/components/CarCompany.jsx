@@ -13,23 +13,16 @@ import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
 import axios from 'axios'
 
-// const rows = [
-//   {
-//     CompanyName: 'Maruti Suzuki',
-//     MarketShare: '50%',
-//     Headquarters: 'Mumbai',
-//     CEO: 'na guhi oska',
-//     FoundedIn: 1956,
-//   },
-// ]
 const CarCompany = (props) => {
   // console.log(companyData)
   const navigate = useNavigate()
   const [companyData, setCompanyData] = useState({})
 
   const getCompanies = async () => {
-    const response = await axios.get('http://localhost:4000/companies')
-    // console.log(response.data)
+    const response = await axios.get(
+      'https://one-mdm-server.vercel.app/companies',
+    )
+    console.log(response.data)
     setCompanyData(response.data)
   }
   useEffect(() => {
@@ -38,7 +31,7 @@ const CarCompany = (props) => {
   const handleDelete = async (id) => {
     // console.log(id)
     const response = await axios.delete(
-      `http://localhost:4000/delete-company/${id}`,
+      `https://one-mdm-server.vercel.app/delete-company/${id}`,
     )
     if (response.status === 200) {
       alert('Company deleted successfully')
@@ -50,6 +43,11 @@ const CarCompany = (props) => {
       <div className="btnContainer">
         <Link to="/create/company" className="btn">
           <AddIcon />
+          Add One Company
+        </Link>
+        <Link to="/create/company-with-models" className="btn">
+          <AddIcon />
+          Add Company With Model
         </Link>
       </div>
       <TableContainer sx={{ display: 'flex', justifyContent: 'center' }}>
