@@ -22,7 +22,7 @@ const CarCompany = (props) => {
     const response = await axios.get(
       'https://one-mdm-server.vercel.app/companies',
     )
-    console.log(response.data)
+    
     setCompanyData(response.data)
   }
   useEffect(() => {

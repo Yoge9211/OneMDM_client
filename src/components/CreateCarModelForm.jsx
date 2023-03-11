@@ -23,7 +23,7 @@ const CreateCarModelForm = () => {
         data: data,
       })
       if (response) {
-        alert('Success')
+        alert(response.data.message)
         setData({
           modelName: '',
           length: '',

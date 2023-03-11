@@ -22,7 +22,7 @@ const CarCompanyInputForm = () => {
         data: data,
       })
       if (response) {
-        alert('Success')
+        alert(response.data.message)
         navigate(-1)
       }
     } catch (error) {

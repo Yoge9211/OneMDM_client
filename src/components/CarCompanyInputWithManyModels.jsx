@@ -15,6 +15,7 @@ const CarCompanyInputWithManyModels = () => {
     ceo: '',
     foundedIn: '',
   })
+  // console.log(data)
 
   return (
     <div className="formContainer">

@@ -43,9 +43,17 @@ const CarCompanyInputWithManyModels = (props) => {
     setModelsData(newModelsData)
   }
 
+  const settingData = async () => {
+    await setFormData((preData) => {
+      return {
+        ...data,
+      }
+    })
+  }
   const handleSubmit = async (e) => {
     e.preventDefault()
     // console.log(modelsData)
+    settingData()
     console.log(formData)
   }
 
@@ -98,14 +106,21 @@ const CarCompanyInputWithManyModels = (props) => {
                   <button onClick={() => handleRemove(index)}>Remove</button>
                 )}
                 <div>
-                  <button onClick={addMore}>Add More Models</button>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault()
+                      addMore()
+                    }}
+                  >
+                    Add More Models
+                  </button>
                 </div>
               </div>
             )
           })}
         </div>
         <div className="submitBtn">
-          <button type="submit">Submit</button>
+          <input type="submit" />
         </div>
       </form>
     </div>
